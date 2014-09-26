@@ -1,0 +1,24 @@
+<ion-view title="JavaOne Tweets" ng-controller="FriendsCtrl">
+  <ion-content>
+    <ion-refresher
+    pulling-text="Pull to refresh..."
+    on-refresh="doRefresh()">
+  	</ion-refresher>
+    <ion-list>
+      <ion-item ng-repeat="tweet in tweets" href="#">
+      <img src="{{tweet.user.profile_image_url}}" class="avatar">
+      <h2>{{tweet.user.name}}</h2>
+      <p>{{tweet.text}}</p>
+      
+      <ion-option-button class="button-positive"
+                             >
+            Retweet
+          </ion-option-button>
+      <ion-option-button class="button-calm"
+                             >
+            Favorite
+       </ion-option-button>
+       </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>
