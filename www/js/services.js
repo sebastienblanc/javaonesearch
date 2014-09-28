@@ -15,8 +15,8 @@ services.factory('Tweets', function($resource, $http) {
     return r;
 })
 .run(function ($base64, $http) {
-	 var consumerKey = encodeURIComponent('DlRjFonXpoalopjVgKs2xecyb')
-	    var consumerSecret = encodeURIComponent('9yyTYqhs8sHsDuA0vZH4pPBEPMy87PWpKDYKwXzsrsBBi9nIGg')
+	 var consumerKey = encodeURIComponent('<replace with your key>')
+	    var consumerSecret = encodeURIComponent('<replace with your secret')
 	    var credentials = $base64.encode(consumerKey + ':' + consumerSecret)
 	    // Twitters OAuth service endpoint
 	    var twitterOauthEndpoint = $http.post(
